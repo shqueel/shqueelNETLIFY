@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>shqueel - personal site</title>
+    </head>
+    <body onload="age()">
+        <div class="container">
+            <img src="me.jpeg" />
+            <h1>Hi, I'm Jack.</h1>
+            <h2>Fun facts about me:</h2>
+            <div class="fun-facts">
+                <ul>
+                    <li><strong id="age_output"></strong> years old.</li>
+                    <li>Live in Manchester.</li>
+                    <li>Likes cars.</li>
+                </ul>
+            </div>
+            <p>Connect with me on <a href="https://uk.linkedin.com/in/jack-fillingham-52309b218">LinkedIn.</a></p>
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function age_calc(dob) { 
+
+            var diff_ms = Date.now() - dob.getTime();
+            
+            var age_dt = new Date(diff_ms); 
+        
+            return Math.abs(age_dt.getUTCFullYear() - 1970);
+        }
+
+        function age() {
+            document.getElementById("age_output").innerHTML = age_calc(new Date(2003, 5, 3));
+            console.log(age_calc(new Date(2003, 5, 3)));
+        }
+        
+        
+        
+            </script>
+</html>
