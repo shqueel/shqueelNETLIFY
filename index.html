@@ -5,6 +5,7 @@
         <title>shqueel - personal site</title>
     </head>
     <body onload="age()">
+        <script src="main.js"></script>
         <div class="container">
             <img src="me.jpeg" />
             <h1>Hi, I'm Jack.</h1>
@@ -19,37 +20,4 @@
             <p>Connect with me on <a href="https://uk.linkedin.com/in/jack-fillingham-52309b218">LinkedIn.</a></p>
         </div>
     </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-
-        function age_calc(dob) { 
-
-            var diff_ms = Date.now() - dob.getTime();
-            
-            var age_dt = new Date(diff_ms); 
-        
-            return Math.abs(age_dt.getUTCFullYear() - 1970);
-        }
-
-        function age() {
-            document.getElementById("age_output").innerHTML = age_calc(new Date(2003, 5, 3));
-            console.log(age_calc(new Date(2003, 5, 3)));
-        }
-        
-        
-        
-            </script>
 </html>
